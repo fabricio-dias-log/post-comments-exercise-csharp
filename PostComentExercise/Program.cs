@@ -16,8 +16,8 @@ class Program
             12
             );
         
-        post1.addComment(comment1);
-        post1.addComment(comment2);
+        post1.AddComment(comment1);
+        post1.AddComment(comment2);
         
         Comment comment3 = new Comment("Good night!");
         Comment comment4 = new Comment("May the Force be with you!");
@@ -29,8 +29,8 @@ class Program
             5
             );
         
-        post2.addComment(comment3);
-        post2.addComment(comment4);
+        post2.AddComment(comment3);
+        post2.AddComment(comment4);
         
     }
 }
