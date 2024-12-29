@@ -1,4 +1,6 @@
-﻿namespace PostComentExercise.Entities;
+﻿using System.Text;
+
+namespace PostComentExercise.Entities;
 
 public class Post
 {
@@ -29,5 +31,27 @@ public class Post
     public void RemoveComment(Comment comment)
     {
         Comments.Remove(comment);
+    }
+
+    public override string ToString()
+    {
+        StringBuilder sb = new StringBuilder();
+        sb.AppendLine("!!!-----------------Post-----------------!!!");
+        sb.AppendLine($"{Title}");
+        sb.AppendLine("--------------------------------------------");
+        sb.AppendLine($"{Likes} Likes - {Moment.ToString("dd/MM/yyyy HH:mm:ss")}");
+        sb.AppendLine("-------------------Content------------------");
+        sb.AppendLine($"{Content}");
+        sb.AppendLine("------------------Comments------------------");
+        sb.AppendLine("Comments:");
+        sb.AppendLine("--------------------------------------------");
+        
+        foreach (Comment comment in Comments)
+        {
+            sb.AppendLine(comment.Text);
+            sb.AppendLine("--------------------------------------------");
+        }
+        
+        return sb.ToString();
     }
 }

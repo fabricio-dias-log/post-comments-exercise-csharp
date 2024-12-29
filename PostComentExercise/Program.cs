@@ -31,6 +31,9 @@ class Program
         
         post2.AddComment(comment3);
         post2.AddComment(comment4);
+
+        Console.WriteLine(post1);
+        Console.WriteLine(post2);
         
     }
 }
